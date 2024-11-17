@@ -1,0 +1,114 @@
+@import './variables.scss';
+@import './effects.scss';
+.card {
+  background: $card-bg-color;
+  border-radius: 3px;
+  box-shadow: 0px 4px 7px 1px $item_img_shadow_color;
+  -webkit-box-shadow: 0px 4px 7px 1px $item_img_shadow_color;
+  -moz-box-shadow: 0px 4px 7px 1px $item_img_shadow_color;
+  margin-top: 35px;
+  position: relative;
+
+  &_content {
+    padding: 15px;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.loading {
+      opacity: 0.3;
+    }
+
+    &_body {
+      flex: 1;
+    }
+
+    &_loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .spinner {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: url(../images/icons/spiner.svg) no-repeat center center;
+        background-size: cover;
+        animation: spin 1s linear infinite;
+      }
+
+      .spinner-text {
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: $card-loader-color;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    &_header {
+      border-bottom: 1px solid $card-header-border-color;
+      .h2 {
+        color: $card-header-color;
+        font-family: Oswald;
+        font-size: 28px;
+        font-weight: 200;
+        line-height: 41.5px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    & > button {
+      @extend .ripple-btn;
+
+      margin-top: 10px;
+      background-color: $neutral-0;
+      color: $neutral-650;
+      border-radius: 8px;
+      padding: 10px 40px;
+      border: none;
+      font-family: Oswald;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 22.23px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      &:hover {
+        background-color: $neutral-white;
+      }
+
+      box-shadow: 0px 2px 2px 1px $item_img_shadow_color;
+      -webkit-box-shadow: 0px 2px 2px 1px $item_img_shadow_color;
+      -moz-box-shadow: 0px 2px 2px 1px $item_img_shadow_color;
+    }
+  }
+}

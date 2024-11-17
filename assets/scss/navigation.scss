@@ -1,0 +1,40 @@
+@import './variables.scss';
+@import './effects.scss';
+.nav-links {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  gap: 9px;
+  @media screen and (max-width: $screen-size-md) {
+    display: none;
+  }
+  li {
+    @extend .ripple-btn;
+    border-radius: 0;
+    list-style: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      background-color: $neutral-300;
+      border-bottom: 4px solid $primary-green;
+    }
+    &:hover {
+      &:not(.active) {
+        background-color: $neutral-700;
+      }
+    }
+    a {
+      color: $neutral-white;
+      text-decoration: none;
+      font-size: 26px;
+      text-align: center;
+      font-family: 'Oswald';
+      font-weight: 300;
+    }
+  }
+}

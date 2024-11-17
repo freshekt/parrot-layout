@@ -1,0 +1,128 @@
+// Brand colors
+$primary-blue: #0066ff;
+$primary-green: #00ff4f;
+
+// Neutral colors
+$neutral-900: #000;
+$neutral-850: #29292b;
+
+$neutral-800: #333333;
+$neutral-700: #424242;
+$neutral-600: #515151;
+
+$neutral-650: #737373;
+$neutral-550: #5c5c5c;
+$neutral-500: #808080;
+$neutral-400: #9e9e9eb2;
+$neutral-350: #939393;
+$neutral-300: #b6b6b6;
+$neutral-200: #c1c1c1;
+$neutral-100: #e6e6e6;
+$neutral-50: #f2f2f2;
+$neutral-0: #f0f0f0;
+$neutral-white: #ffffff;
+
+$screen-size-sm: 750px;
+$screen-size-md: 900px;
+
+// System colors
+$error-red: #ff3333;
+$success-green: #00cc66;
+$warning-yellow: #ffb800;
+
+// Background colors
+$bg-light: #eaeaea;
+$bg-dark: rgba(1, 1, 1, 1);
+$bg-dark-transparent: rgba(1, 1, 1, 0.8);
+$input-bg-color: #efefef;
+$order-btn_bg: linear-gradient(180deg, rgba(84, 84, 84, 0.9) 0%, #545454 100%);
+$order-btn_tooltip_bg: rgba(0, 0, 0, 0.8);
+$card-bg-color: #e3e3e3;
+$card-header-color: #4f4f4f;
+$card-header-border-color: #c7c7c7;
+$card-loader-color: #646464;
+$item_img_shadow_color: rgba(0, 0, 0, 0.25);
+
+$greed-mark-color: #aa3132;
+
+$ripple-color: rgba(255, 255, 255, 0.5);
+$ripple-duration: 0.5s;
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald/Oswald.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-ExtraLight.eot');
+  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'),
+    url('../fonts/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-ExtraLight.woff2') format('woff2'),
+    url('../fonts/Oswald-ExtraLight.woff') format('woff'),
+    url('../fonts/Oswald-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-Light.eot');
+  src: local('Oswald Light'), local('Oswald-Light'),
+    url('../fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Light.woff2') format('woff2'),
+    url('../fonts/Oswald-Light.woff') format('woff'),
+    url('../fonts/Oswald-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-Medium.eot');
+  src: local('Oswald Medium'), local('Oswald-Medium'),
+    url('../fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Medium.woff2') format('woff2'),
+    url('../fonts/Oswald-Medium.woff') format('woff'),
+    url('../fonts/Oswald-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-Bold.eot');
+  src: local('Oswald Bold'), local('Oswald-Bold'),
+    url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Bold.woff2') format('woff2'),
+    url('../fonts/Oswald-Bold.woff') format('woff'),
+    url('../fonts/Oswald-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-Regular.eot');
+  src: local('Oswald Regular'), local('Oswald-Regular'),
+    url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Regular.woff2') format('woff2'),
+    url('../fonts/Oswald-Regular.woff') format('woff'),
+    url('../fonts/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-SemiBold.eot');
+  src: local('Oswald SemiBold'), local('Oswald-SemiBold'),
+    url('../fonts/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
+    url('../fonts/Oswald-SemiBold.woff') format('woff'),
+    url('../fonts/Oswald-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

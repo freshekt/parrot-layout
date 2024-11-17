@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+.text-input {
+  border: 1px solid $neutral-200;
+  min-height: 38px;
+  padding: 0px 10px;
+  background-color: $input-bg-color;
+  &::placeholder {
+    color: $neutral-200;
+    opacity: 1;
+  }
+  &::-webkit-input-placeholder {
+    color: $neutral-200;
+  }
+
+  &::-moz-placeholder {
+    color: $neutral-200;
+  }
+
+  &:-ms-input-placeholder {
+    color: $neutral-200;
+  }
+
+  &::-ms-input-placeholder {
+    color: $neutral-200;
+  }
+}

@@ -1,0 +1,333 @@
+@import './variables.scss';
+
+body {
+  background: $bg-dark;
+  color: $neutral-white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald';
+  font-weight: 300;
+
+  .container {
+    background: $bg-dark;
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 205px;
+    .header {
+      background-color: $bg-dark;
+      background-image: url(../images/header.jpg);
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      height: 205px;
+      display: flex;
+      align-items: end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 110;
+
+      .mobile-menu {
+        display: none;
+        color: $neutral-white;
+        fill: $neutral-white;
+        &::after {
+          content: '';
+          // Add mask properties to enable color changes
+          mask-image: url(../images/icons/menu.svg);
+          -webkit-mask-image: url(../images/icons/menu.svg);
+          mask-size: cover;
+          -webkit-mask-size: cover;
+          mask-repeat: no-repeat;
+          -webkit-mask-repeat: no-repeat;
+          // Set the color you want
+          background-color: $neutral-white; // Change this to any color
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 11px;
+          left: 10px;
+        }
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        @media screen and (max-width: $screen-size-md) {
+          display: block;
+        }
+      }
+      .mobile-search {
+        display: none;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        &::after {
+          content: '';
+          // Add mask properties to enable color changes
+          mask-image: url(../images/icons/search.svg);
+          -webkit-mask-image: url(../images/icons/search.svg);
+          mask-size: cover;
+          -webkit-mask-size: cover;
+          mask-repeat: no-repeat;
+          -webkit-mask-repeat: no-repeat;
+          // Set the color you want
+          background-color: $neutral-white; // Change this to any color
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 11px;
+          right: 10px;
+        }
+        @media screen and (max-width: $screen-size-md) {
+          display: block;
+        }
+      }
+
+      nav {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+
+        background: $bg-dark-transparent;
+        flex: 1;
+        & > h1 {
+          align-self: center;
+          text-align: center;
+          display: none;
+          color: $neutral-white;
+          align-items: center;
+          justify-content: center;
+          left: 50%;
+          transform: translateX(-50%);
+          position: relative;
+          margin: 10px;
+          @media screen and (max-width: $screen-size-md) {
+            display: flex;
+          }
+        }
+        @import './navigation.scss';
+      }
+    }
+    .main {
+      background-color: $bg-light;
+      color: $neutral-900;
+      padding: 30px;
+      overflow: auto;
+      overflow-x: hidden;
+      display: flex;
+      @media screen and (max-width: $screen-size-md) {
+        flex-direction: column;
+      }
+      @media screen and (max-width: $screen-size-sm) {
+        padding: 0;
+      }
+      @import './content.scss';
+      @import './services.scss';
+    }
+    .footer {
+      display: flex;
+      padding-bottom: 30px;
+      @media screen and (max-width: $screen-size-md) {
+        flex-direction: column;
+      }
+      &_left {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &_right {
+        margin-right: 30px;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        width: 340px;
+        @media screen and (max-width: $screen-size-md) {
+          margin: auto;
+          max-width: 340px;
+          width: 100%;
+        }
+        .copyright {
+          padding: 10px 0;
+          height: 60px;
+          width: 340px;
+          color: $neutral-700;
+          fill: $neutral-700;
+          font-family: Oswald;
+          font-size: 34px;
+          font-weight: 300;
+          line-height: 50.39px;
+          letter-spacing: -0.05em;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          margin-right: 30px;
+          @media screen and (max-width: $screen-size-md) {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            max-width: 340px;
+            width: 100%;
+          }
+          &::before {
+            content: '';
+            background-image: url(../images/icons/copyright.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 14px;
+            height: 14px;
+            display: block;
+            color: $neutral-700;
+            fill: $neutral-700;
+            background-size: cover;
+            margin-right: 3px;
+          }
+        }
+        .browsers-info {
+          width: 292px;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          justify-content: end;
+          text-align: end;
+          color: $neutral-550;
+          font-family: Arial;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.8px;
+          letter-spacing: -0.02em;
+          text-align: right;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+
+          @media screen and (max-width: $screen-size-md) {
+            text-align: center;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .browser-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            img {
+              width: 40px;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+
+      &_socials {
+        flex: 1;
+        display: flex;
+
+        padding: 20px;
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          fill: $neutral-850;
+          width: 60px;
+          height: 60px;
+          background-size: cover;
+
+          &.evernote-ico {
+            background: url(../images/social/evernote.svg) no-repeat center
+              center;
+          }
+          &.facebook-ico {
+            background: url(../images/social/facebook.svg) no-repeat center
+              center;
+          }
+          &.pinteres-ico {
+            background: url(../images/social/pinteres.svg) no-repeat center
+              center;
+          }
+          &.twitter-ico {
+            background: url(../images/social/twitter.svg) no-repeat center
+              center;
+          }
+          &.youtube-ico {
+            background: url(../images/social/youtube.svg) no-repeat center
+              center;
+          }
+          &.github-ico {
+            background: url(../images/social/github.svg) no-repeat center center;
+          }
+
+          @media screen and (max-width: $screen-size-sm) {
+            width: 40px;
+            height: 40px;
+            background-size: cover !important;
+          }
+        }
+      }
+      &_links {
+        display: flex;
+        @media screen and (max-width: $screen-size-md) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        gap: 100px;
+        &_item {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: $neutral-350;
+            font-family: Oswald;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 23.71px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            text-decoration: none;
+            @media screen and (max-width: $screen-size-md) {
+              text-align: center;
+            }
+          }
+
+          &_header {
+            font-family: Oswald;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 38.53px;
+            letter-spacing: -0.02em;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: $neutral-700;
+            @media screen and (max-width: $screen-size-md) {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
