@@ -43,8 +43,14 @@
       }
       &::after {
         content: '';
-        background-image: url(../images/icons/search.svg);
+        background-color: $input-icon-color;
+        mask-image: url(../images/icons/search.svg);
+        -webkit-mask-image: url(../images/icons/search.svg);
+        -webkit-mask-size: cover;
         background-size: cover;
+
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
         background-repeat: no-repeat;
         background-position: center center;
         display: block;
