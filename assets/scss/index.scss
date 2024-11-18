@@ -261,6 +261,9 @@ body {
           width: 60px;
           height: 60px;
           background-size: cover;
+          &:hover {
+            opacity: 0.8;
+          }
 
           &.evernote-ico {
             background: url(../images/social/evernote.svg) no-repeat center
