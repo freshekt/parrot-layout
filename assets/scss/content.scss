@@ -100,9 +100,9 @@
         width: 111px;
         height: 156px;
         border: 1px solid $neutral-400;
-        box-shadow: 0px 2px 2px 1px $item_img_shadow_color;
-        -webkit-box-shadow: 0px 2px 2px 1px $item_img_shadow_color;
-        -moz-box-shadow: 0px 2px 2px 1px $item_img_shadow_color;
+        box-shadow: 0px 2px 2px 0px $item_img_shadow_color;
+        -webkit-box-shadow: 0px 2px 2px 0px $item_img_shadow_color;
+        -moz-box-shadow: 0px 2px 2px 0px $item_img_shadow_color;
       }
       &_props {
         font-family: Arial;
@@ -147,6 +147,9 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
 
+        box-shadow: 0px 2px 2px 0px $item_img_shadow_color;
+        -webkit-box-shadow: 0px 2px 2px 0px $item_img_shadow_color;
+        -moz-box-shadow: 0px 2px 2px 0px $item_img_shadow_color;
         &:hover {
           opacity: 0.8;
         }
