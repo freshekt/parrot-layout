@@ -10,8 +10,7 @@ body {
 
   .container {
     background: $bg-dark;
-    max-width: 1170px;
-    margin: 0 auto;
+
     margin-top: 205px;
     .header {
       background-color: $bg-dark;
@@ -121,7 +120,12 @@ body {
         @import './navigation.scss';
       }
     }
+    .main-container {
+      background: url(../images/bg.png);
+    }
     .main {
+      max-width: 1100px;
+      margin: 0 auto;
       background-color: $bg-light;
       color: $neutral-900;
       padding: 30px;
@@ -138,11 +142,18 @@ body {
       @import './services.scss';
     }
     .footer {
-      display: flex;
-      padding-bottom: 30px;
-      @media screen and (max-width: $screen-size-md) {
-        flex-direction: column;
+      & > div {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        padding-bottom: 30px;
+        @media screen and (max-width: $screen-size-md) {
+          flex-direction: column;
+        }
       }
+
+      background-color: $footer-bg-color;
+
       &_left {
         display: flex;
         flex: 1;
@@ -298,12 +309,14 @@ body {
       }
       &_links {
         display: flex;
+        gap: 100px;
         @media screen and (max-width: $screen-size-md) {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          gap: 30px;
         }
-        gap: 100px;
+
         &_item {
           display: flex;
           flex-direction: column;
