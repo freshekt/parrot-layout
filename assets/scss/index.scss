@@ -188,7 +188,15 @@ body {
             margin: auto;
             max-width: 340px;
             width: 100%;
+            display: none;
           }
+          &.mobile {
+            display: none;
+            @media screen and (max-width: $screen-size-md) {
+              display: flex;
+            }
+          }
+
           &::before {
             content: '';
             background-image: url(../images/icons/copyright.svg);
