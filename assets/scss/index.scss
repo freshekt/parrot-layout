@@ -159,6 +159,10 @@ body {
         flex: 1;
         flex-direction: column;
         justify-content: center;
+        margin-left: 40px;
+        @media screen and (max-width: $screen-size-md) {
+          margin: auto;
+        }
       }
 
       &_right {
