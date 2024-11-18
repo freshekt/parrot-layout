@@ -47,6 +47,7 @@
     min-width: 340px;
     @media screen and (max-width: $screen-size-sm) {
       width: 100%;
+      min-width: 100%;
     }
   }
 }
