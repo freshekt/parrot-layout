@@ -156,7 +156,10 @@
         color: $neutral-white;
         background-color: $order-btn_tooltip_bg;
         border-radius: 5px;
-        width: 250px;
+        width: 230px;
+        @media screen and (max-width: $screen-size-md) {
+          width: 130px;
+        }
         font-family: Arial;
         font-size: 12px;
         font-weight: 400;
@@ -165,6 +168,8 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         bottom: 43px;
         left: 50%;
         transform: translateX(-50%);
